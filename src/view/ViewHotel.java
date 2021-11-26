@@ -28,17 +28,17 @@ public class ViewHotel {
 
         title = "Введите количество ночей - ";
         System.out.println(title);
-        name = Validator.validateQuantityInput(scanner);
+        night = Validator.validateQuantityInput(scanner);
         model.setNights();
 
         title = "Введите количество проживающих";
         System.out.println(title);
-        name = Validator.validatesInput(scanner);
+        member = Validator.validatesInput(scanner);
         model.setMember();
 
         title = "Введите количество звезд - ";
         System.out.println(title);
-        name = Validator.validatesInput(scanner);
+        star = Validator.validatesInput(scanner);
         model.setStars();
 
 
