@@ -23,11 +23,11 @@ public class ModelHotel implements CountHotel {
 
     public int getMember() { return member; }
 
-    public void setMember(int member) {this.member = member; }
+    public void setMember() {this.member = member; }
 
     @Override
     public double countHotel(int star, int member, int night) {
 
-        return star + member + night ;
+        return stars + member + nights ;
     }
 }

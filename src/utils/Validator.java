@@ -7,19 +7,19 @@ public class Validator {
         public static String validateName(Scanner scanner) {
             String str = scanner.nextLine().trim();
             while (str.isEmpty()) {
-                System.out.print("Пусто! Введите имя клиента: ");
+                System.out.print("Пусто! Введите имя: ");
                 str = scanner.nextLine().trim();
             }
             return str;
         }
 
-        public static int validateQuantityInput(Scanner scanner) {
+        public static String validateQuantityInput(Scanner scanner) {
             while (!scanner.hasNextInt()) {
                 String str = scanner.nextLine().trim();
                 System.out.printf("\"%s\" - не число!\n", str);
                 System.out.print("Введите количество!: ");
             }
-            int quantity = scanner.nextInt();
+            String quantity = scanner.nextInt();
             while (quantity <= 0) {
                 System.out.println("Неверное значение! Введите количество: ");
                 while (!scanner.hasNextInt()) {
@@ -32,13 +32,13 @@ public class Validator {
             return quantity;
         }
 
-        public static double validatePriceInput(Scanner scanner) {
+        public static String validatesInput(Scanner scanner) {
             while (!scanner.hasNextDouble()) {
                 String str = scanner.nextLine().trim();
                 System.out.printf("\"%s\" - не число!\n", str);
                 System.out.print("Введите цену!: ");
             }
-            double price = scanner.nextDouble();
+            String price = scanner.nextDouble();
             while (price <= 0) {
                 System.out.print("Неверное значение! Введите цену: ");
                 while (!scanner.hasNextDouble()) {
