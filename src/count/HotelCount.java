@@ -25,7 +25,7 @@ public class HotelCount {
 
      String output = "--------------------\n"+
              "Ваше имя - " + name + "\n" +
-             "Стоимость проживания за весь период" + roundPayForHotel;
+             "Стоимость проживания за весь период - " + roundPayForHotel;
 
      view.getOutput(output);
 

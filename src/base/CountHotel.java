@@ -2,6 +2,6 @@ package base;
 
 public interface CountHotel {
 
-    double countHotel(double stars, double member,double nights);
+    double countHotel(double star, double member,double night);
 
 }

@@ -34,22 +34,22 @@ import java.util.Scanner;
         }
 
 
-    public static int validatesInput(Scanner scanner) {
-        while (!scanner.hasNextInt()) {
+    public static double validatesInput(Scanner scanner) {
+        while (!scanner.hasNextDouble()) {
         String str = scanner.nextLine().trim();
         System.out.printf("\"%s\" - не число!\n", str);
         System.out.print("Введите число!: ");
         }
-        double price = scanner.nextInt();
-        while (price >= 1.6) {
-        System.out.print("Неверное значение! Введите число в формате 1. до 1.5 включительно: ");
+        double star = scanner.nextDouble();
+        while (star >= 1.6) {
+        System.out.print("Неверное значение! Введите число в формате 1, до 1,5 включительно: ");
         while (!scanner.hasNextDouble()) {
         String str = scanner.nextLine().trim();
         System.out.printf("\"%s\" - не число!\n", str);
-        System.out.print("Введите число в формате 1. до 1.5 включительно: ");
+        System.out.print("Введите число в формате 1, до 1,5 включительно: ");
         }
-        price = scanner.nextInt();
+        star = scanner.nextDouble();
         }
-        return (int) price;
+        return (double) star;
         }
         }

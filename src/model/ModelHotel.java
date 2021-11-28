@@ -5,31 +5,47 @@ import base.CountHotel;
 public class ModelHotel implements CountHotel {
 
     private String name;
-    private int nights;
-    private int stars;
+    private double nights;
+    private double stars;
     private int member;
     private final static double oneNight = 30;
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setName() { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public int getNights() { return nights; }
+    public double getNights() {
+        return nights;
+    }
 
-    public void setNights() { this.nights  = nights; }
+    public void setNights(double nights) {
+        this.nights  = nights;
+    }
 
-    public int getStars() { return stars; }
+    public double getStars() {
+        return stars;
+    }
 
-    public void setStars() { this.stars = stars; }
+    public void setStars(double stars) {
+        this.stars = stars;
+    }
 
-    public int getMember() { return member; }
+    public int getMember() {
+        return member;
+    }
 
-    public void setMember() {this.member = member; }
+    public void setMember(int member) {
+        this.member = member;
+    }
 
 
     @Override
-    public double countHotel(double star, double member, double nights) {
+    public double countHotel(double star, double member, double night) {
 
-        return oneNight * stars * member * nights ;
+        return oneNight * star * member * night ;
     }
 }
