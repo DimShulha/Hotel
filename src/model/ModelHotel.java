@@ -28,8 +28,8 @@ public class ModelHotel implements CountHotel {
 
 
     @Override
-    public double countHotel(double star, double member, double night) {
+    public double countHotel(double star, double member, double nights) {
 
-        return oneNight * stars * nights * member;
+        return oneNight * stars * member * nights ;
     }
 }

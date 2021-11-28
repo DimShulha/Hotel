@@ -42,10 +42,12 @@ public class ViewHotel {
         star = Validator.validatesInput(scanner);
         model.setStars();
 
-
-
-
+        scanner.close();
     }
 
+    public void getOutput(String output){
+
+        System.out.println(output);
+    }
 
 }

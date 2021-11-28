@@ -38,15 +38,15 @@ import java.util.Scanner;
         while (!scanner.hasNextInt()) {
         String str = scanner.nextLine().trim();
         System.out.printf("\"%s\" - не число!\n", str);
-        System.out.print("Введите цену!: ");
+        System.out.print("Введите число!: ");
         }
         double price = scanner.nextInt();
-        while (price >= 6) {
-        System.out.print("Неверное значение! Введите цену: ");
+        while (price >= 1.6) {
+        System.out.print("Неверное значение! Введите число в формате 1. до 1.5 включительно: ");
         while (!scanner.hasNextDouble()) {
         String str = scanner.nextLine().trim();
         System.out.printf("\"%s\" - не число!\n", str);
-        System.out.print("Введите цену!: ");
+        System.out.print("Введите число в формате 1. до 1.5 включительно: ");
         }
         price = scanner.nextInt();
         }
