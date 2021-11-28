@@ -41,7 +41,7 @@ import java.util.Scanner;
         System.out.print("Введите цену!: ");
         }
         double price = scanner.nextInt();
-        while (price <= 0) {
+        while (price >= 6) {
         System.out.print("Неверное значение! Введите цену: ");
         while (!scanner.hasNextDouble()) {
         String str = scanner.nextLine().trim();

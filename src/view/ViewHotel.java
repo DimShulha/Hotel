@@ -31,12 +31,13 @@ public class ViewHotel {
         night = Validator.validateQuantityInput(scanner);
         model.setNights();
 
-        title = "Введите количество проживающих";
+        title = "Введите количество проживающих - ";
         System.out.println(title);
-        member = Validator.validatesInput(scanner);
+        member = Validator.validateQuantityInput(scanner);
         model.setMember();
 
-        title = "Введите количество звезд - ";
+        title = "Введите количество звезд (1.1 - звезда, 1.2 - 2 звезды," +
+                " 1.3 - 3 звезды, 1.4 - 4 звезды, 1.5 - 5 звезд - )";
         System.out.println(title);
         star = Validator.validatesInput(scanner);
         model.setStars();

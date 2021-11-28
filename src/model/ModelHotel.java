@@ -8,6 +8,7 @@ public class ModelHotel implements CountHotel {
     private int nights;
     private int stars;
     private int member;
+    private final static double oneNight = 30;
 
     public String getName() { return name; }
 
@@ -25,9 +26,10 @@ public class ModelHotel implements CountHotel {
 
     public void setMember() {this.member = member; }
 
-    @Override
-    public double countHotel(int star, int member, int night) {
 
-        return stars + member + nights ;
+    @Override
+    public double countHotel(double star, double member, double night) {
+
+        return oneNight * stars * nights * member;
     }
 }
