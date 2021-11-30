@@ -8,9 +8,9 @@ public class ModelHotel implements CountHotel {
     private double nights;
     private double stars;
     private int member;
-    private final static double oneNight = 30;
-    private final static int adult = 15;
-    private int children;
+    private final static double payForAdult = 30;
+    private double adult;
+    private double children;
 
     public String getName() {
         return name;
@@ -36,23 +36,31 @@ public class ModelHotel implements CountHotel {
         this.stars = stars;
     }
 
-    public int getMember() {
+    /*public double getMember() {
         return member;
     }
 
-    public void setMember(int member) {
+    public void setMember(double member) {
         this.member = member;
-    }
+    }*/
 
-    public int getAdult() {return adult;}
+    public double getAdult() {return adult;}
 
-    public int getChildren() { return children; }
+    public void setAdult(double adult) { this.adult = adult; }
 
-    public void setChildren(int children){ this.children = children; }
+    public double getChildren() { return children; }
+
+    public void setChildren(double children){ this.children = children; }
+
+
 
     @Override
-    public double countHotel(double star, int adult, int children, double night) {
+    public double countHotel(double adult, double children) {
+        return (adult * payForAdult) + (children * payForAdult * 0.5 );
+    }
 
-        return oneNight * star * adult * ( adult * 0.5 * children ) * night ;
+    @Override
+    public double countSumm(double countHotel, double star, double night) {
+        return countHotel * star * night;
     }
 }

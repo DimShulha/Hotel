@@ -20,8 +20,9 @@ public class HotelCount {
 
      String name = model.getName();
 
-     double payForHotel = model.countHotel(model.getAdult(),model.getChildren(), model.getNights(), model.getStars());
-     String roundPayForHotel = Rounder.roundValue(payForHotel);
+     double member = model.countHotel(model.getAdult(),model.getChildren());
+     double summ = model.countSumm(member, model.getStars(), model.getNights());
+     String roundPayForHotel = Rounder.roundValue(summ);
 
      String output = "--------------------\n"+
              "Ваше имя - " + name + "\n" +

@@ -14,6 +14,8 @@ public class ViewHotel {
     int member;
     int night;
     Scanner scanner;
+    int children;
+    int adult;
 
     public ViewHotel(ModelHotel model){ this.model = model; }
 
@@ -31,10 +33,15 @@ public class ViewHotel {
         night = Validator.validateQuantityInput(scanner);
         model.setNights(night);
 
-        title = "Введите количество проживающих - ";
+        title = "Введите количество взрослых - ";
         System.out.println(title);
-        member = Validator.validateQuantityInput(scanner);
-        model.setMember(member);
+        adult = Validator.validateQuantityInput(scanner);
+        model.setAdult(adult);
+
+        title = "Введите количество детей (до 14 лет) - ";
+        System.out.println(title);
+        children = Validator.validateQuantityInput(scanner);
+        model.setChildren(children);
 
         title = "Введите количество звезд (1,1 - 1 звезда, 1,2 - 2 звезды," +
                 " 1,3 - 3 звезды, 1,4 - 4 звезды, 1,5 - 5 звезд - )";
