@@ -9,6 +9,8 @@ public class ModelHotel implements CountHotel {
     private double stars;
     private int member;
     private final static double oneNight = 30;
+    private final static int adult = 15;
+    private int children;
 
     public String getName() {
         return name;
@@ -18,8 +20,8 @@ public class ModelHotel implements CountHotel {
         this.name = name;
     }
 
-    public double getNights() {
-        return nights;
+    public int getNights() {
+        return (int) nights;
     }
 
     public void setNights(double nights) {
@@ -42,10 +44,15 @@ public class ModelHotel implements CountHotel {
         this.member = member;
     }
 
+    public int getAdult() {return adult;}
+
+    public int getChildren() { return children; }
+
+    public void setChildren(int children){ this.children = children; }
 
     @Override
-    public double countHotel(double star, double member, double night) {
+    public double countHotel(double star, int adult, int children, double night) {
 
-        return oneNight * star * member * night ;
+        return oneNight * star * adult * ( adult * 0.5 * children ) * night ;
     }
 }

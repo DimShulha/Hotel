@@ -20,7 +20,7 @@ public class HotelCount {
 
      String name = model.getName();
 
-     double payForHotel = model.countHotel(model.getMember(), model.getNights(), model.getStars());
+     double payForHotel = model.countHotel(model.getAdult(),model.getChildren(), model.getNights(), model.getStars());
      String roundPayForHotel = Rounder.roundValue(payForHotel);
 
      String output = "--------------------\n"+
