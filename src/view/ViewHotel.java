@@ -11,7 +11,7 @@ public class ViewHotel {
     String title;
     String name;
     double star;
-    int member;
+    int pets;
     int night;
     Scanner scanner;
     int children;
@@ -42,6 +42,11 @@ public class ViewHotel {
         System.out.println(title);
         children = Validator.validateQuantityInput(scanner);
         model.setChildren(children);
+
+        title = "Введите количество животных - ";
+        System.out.println(title);
+        pets = Validator.validateQuantityInput(scanner);
+        model.setPets(pets);
 
         title = "Введите количество звезд (1,1 - 1 звезда, 1,2 - 2 звезды," +
                 " 1,3 - 3 звезды, 1,4 - 4 звезды, 1,5 - 5 звезд - )";

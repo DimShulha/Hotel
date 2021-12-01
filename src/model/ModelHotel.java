@@ -7,7 +7,7 @@ public class ModelHotel implements CountHotel {
     private String name;
     private double nights;
     private double stars;
-    private int member;
+    private int pets;
     private final static double payForAdult = 30;
     private double adult;
     private double children;
@@ -36,13 +36,9 @@ public class ModelHotel implements CountHotel {
         this.stars = stars;
     }
 
-    /*public double getMember() {
-        return member;
-    }
+    public int getPets() { return pets; }
 
-    public void setMember(double member) {
-        this.member = member;
-    }*/
+    public void setPets(int pets) { this.pets = pets; }
 
     public double getAdult() {return adult;}
 
@@ -62,5 +58,10 @@ public class ModelHotel implements CountHotel {
     @Override
     public double countSumm(double countHotel, double star, double night) {
         return countHotel * star * night;
+    }
+
+    @Override
+    public double countPets(int pets){
+        return pets * (payForAdult * 120 / 100);
     }
 }
