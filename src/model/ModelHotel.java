@@ -36,14 +36,6 @@ public class ModelHotel implements CountHotel {
         this.stars = stars;
     }
 
-    /*public double getMember() {
-        return member;
-    }
-
-    public void setMember(double member) {
-        this.member = member;
-    }*/
-
     public double getAdult() {return adult;}
 
     public void setAdult(double adult) { this.adult = adult; }

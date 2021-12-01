@@ -50,6 +50,30 @@ import java.util.Scanner;
         }
         star = scanner.nextDouble();
         }
-        return (double) star;
+        return star;
         }
+
+
+        public static int validateNightInput(Scanner scanner) {
+            while (!scanner.hasNextInt()) {
+                String str = scanner.nextLine().trim();
+                System.out.printf("\"%s\" - не число!\n", str);
+                System.out.print("Введите количество!: ");
+            }
+            int quantity = scanner.nextInt();
+            while (quantity >= 11) {
+                System.out.println("Неверное значение! Введите количество: ");
+                while (!scanner.hasNextInt()) {
+                    String str = scanner.next().trim();
+                    System.out.printf("\"%s\" - не число!\n", str);
+                    System.out.println("Введите количество!: ");
+                }
+                quantity = scanner.nextInt();
+            }
+            return quantity;
         }
+
+
+
+        }
+
