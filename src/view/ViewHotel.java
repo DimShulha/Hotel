@@ -28,9 +28,9 @@ public class ViewHotel {
         name = Validator.validateName(scanner);
         model.setName(name);
 
-        title = "Введите количество ночей - ";
+        title = "Введите количество ночей (максимум 10)- ";
         System.out.println(title);
-        night = Validator.validateQuantityInput(scanner);
+        night = Validator.validateNightInput(scanner);
         model.setNights(night);
 
         title = "Введите количество взрослых - ";

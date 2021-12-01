@@ -22,6 +22,8 @@ public class HotelCount {
 
      double member = model.countHotel(model.getAdult(),model.getChildren());
      double summ = model.countSumm(member, model.getStars(), model.getNights());
+     double discount = summ - (summ * 30 /100);
+     String roundDIscount = Rounder.roundValue(discount);
      double countPets = model.countPets(model.getPets());
      double allSumm = summ + countPets;
 
@@ -29,7 +31,9 @@ public class HotelCount {
 
      String output = "--------------------\n"+
              "Ваше имя - " + name + "\n" +
-             "Стоимость проживания за весь период - " + roundPayForHotel;
+             "Стоимость проживания за весь период - " + roundPayForHotel +
+             "\nCтоимость проживания с учетом скидки - " + roundDIscount;
+
 
      view.getOutput(output);
 
