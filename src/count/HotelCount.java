@@ -3,7 +3,7 @@ package count;
 import model.ModelHotel;
 import view.ViewHotel;
 import utils.Rounder;
-
+import exeption.CountExeption;
 
 public class HotelCount {
 

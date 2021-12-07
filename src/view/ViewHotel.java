@@ -2,6 +2,7 @@ package view;
 
 import model.ModelHotel;
 import utils.Validator;
+import exeption.CountExeption;
 
 import java.util.Scanner;
 

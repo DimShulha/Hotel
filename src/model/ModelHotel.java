@@ -5,7 +5,7 @@ import base.CountHotel;
 public class ModelHotel implements CountHotel {
 
     private String name;
-    private double nights;
+    private int nights;
     private double stars;
     private int pets;
     private final static double payForAdult = 30;
@@ -21,10 +21,10 @@ public class ModelHotel implements CountHotel {
     }
 
     public int getNights() {
-        return (int) nights;
+        return nights;
     }
 
-    public void setNights(double nights) {
+    public void setNights(int nights) {
         this.nights  = nights;
     }
 
@@ -36,17 +36,29 @@ public class ModelHotel implements CountHotel {
         this.stars = stars;
     }
 
-    public int getPets() { return pets; }
+    public int getPets() {
+        return pets;
+    }
 
-    public void setPets(int pets) { this.pets = pets; }
+    public void setPets(int pets) {
+        this.pets = pets;
+    }
 
-    public double getAdult() {return adult;}
+    public double getAdult() {
+        return adult;
+    }
 
-    public void setAdult(double adult) { this.adult = adult; }
+    public void setAdult(double adult) {
+        this.adult = adult;
+    }
 
-    public double getChildren() { return children; }
+    public double getChildren() {
+        return children;
+    }
 
-    public void setChildren(double children){ this.children = children; }
+    public void setChildren(double children){
+        this.children = children;
+    }
 
 
 
